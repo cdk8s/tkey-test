@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.cdk8s.tkey</groupId>
+    <artifactId>tkey-sso-performance-script</artifactId>
+    <version>1.0.0</version>
+    <packaging>jar</packaging>
+
+    <name>${project.artifactId}</name>
+    <description>${project.artifactId}</description>
+
+    <url>https://github.com/cdk8s</url>
+
+    <developers>
+        <developer>
+            <name>cdk8s</name>
+            <email>cdk8s@qq.com</email>
+        </developer>
+    </developers>
+
+    <dependencies>
+        <dependency>
+            <!--https://search.maven.org/search?q=g:io.gatling.highcharts%20AND%20a:gatling-charts-highcharts&core=gav-->
+            <groupId>io.gatling.highcharts</groupId>
+            <artifactId>gatling-charts-highcharts</artifactId>
+            <version>3.0.0</version>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <!--https://search.maven.org/search?q=g:io.gatling%20AND%20a:gatling-maven-plugin&core=gav-->
+                <groupId>io.gatling</groupId>
+                <artifactId>gatling-maven-plugin</artifactId>
+                <version>3.0.0</version>
+                <configuration>
+                    <!--<runMultipleSimulations>true</runMultipleSimulations>-->
+                    <resultsFolder>target/gatling/results</resultsFolder>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+    <repositories>
+        <repository>
+            <id>aliyun-pom-repos</id>
+            <url>http://maven.aliyun.com/nexus/content/groups/public/</url>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </repository>
+    </repositories>
+
+    <pluginRepositories>
+        <pluginRepository>
+            <id>aliyun-pom-plugin</id>
+            <url>http://maven.aliyun.com/nexus/content/groups/public/</url>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </pluginRepository>
+    </pluginRepositories>
+
+</project>
