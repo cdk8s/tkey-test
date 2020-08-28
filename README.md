@@ -11,3 +11,11 @@
 ## Gitee
 
 - [Gitee](https://gitee.com/cdk8s/tkey-docs)
+
+## Gatling 方式压力测试
+
+- 不带参数运行命令：
+
+```
+mvn gatling:test -Dgatling.simulationClass=test.load.oauth.TkeyPasswordGrantType
+```
